@@ -68,9 +68,9 @@ namespace raspicam {
 
             // Default everything to zero
             memset ( &State, 0, sizeof ( RASPIVID_STATE ) );
-            State.framerate 		= 10;
-            State.width 			= 1280;      // use a multiple of 320 (640, 1280)
-            State.height 			= 960;		// use a multiple of 240 (480, 960)
+            State.framerate 		= 90;
+            State.width 			= 640;      // use a multiple of 320 (640, 1280)
+            State.height 			= 480;		// use a multiple of 240 (480, 960)
             State.sharpness = 0;
             State.contrast = 0;
             State.brightness = 50;
@@ -78,10 +78,10 @@ namespace raspicam {
             State.ISO = 400;
             State.videoStabilisation = false;
             State.exposureCompensation = 0;
-            State.captureFtm=RASPICAM_FORMAT_RGB;
+            State.captureFtm=RASPICAM_FORMAT_GRAY;
             State.rpc_exposureMode = RASPICAM_EXPOSURE_AUTO;
             State.rpc_exposureMeterMode = RASPICAM_METERING_AVERAGE;
-            State.rpc_awbMode = RASPICAM_AWB_AUTO;
+            State.rpc_awbMode = RASPICAM_AWB_OFF;
             State.rpc_imageEffect = RASPICAM_IMAGE_EFFECT_NONE;
             State.colourEffects.enable = 0;
             State.colourEffects.u = 128;
